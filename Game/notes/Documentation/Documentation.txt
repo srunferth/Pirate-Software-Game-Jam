@@ -1,0 +1,114 @@
+This note is high-level documentation for the core parts of this template project.
+All events in this project are commented, so you can open any event and read the comments to understand what it does, and how it works.
+
+
+# How to Create New Levels
+
+	To create a new first create a new room that is the same width and height as the current rooms.
+	I recommend duplicating rm_level_1 and removing what you don't want from it so that you have all
+	the necessary layers. 
+	
+	Then build out your level however you want. The fences and paths are done with sprites. All the 
+	other objects need to be depth sorted and therefore are objects in the Environment folder. 
+	You can create your own path and use it for the path variable. 
+	
+	Then duplicate obj_wave_level_1 and change the level_path variable to be the path in the room and 
+	design your waves however you want. You need at least one wave, but you can make as many as you wish.
+	
+	Make sure each level has an object of obj_gameplay_manager in it (only one) and wave level object (only one)
+	
+	Finally, go to the Buttons folder and have the button_start user event 0 send you to your new room.
+	
+	
+# How to Change Important Starting Variables
+
+	You can change the starting health and money in the obj_gameplay_manager.
+	You can change what the waves look like in obj_wave_level_1 (or any wave objects you create)
+	You can change the health and speed of the enemies in obj_zombie and obj_frankenstein
+	You can change the cost of the archer tower in obj_button_tower_buy_archer and the cost of the arc tower in obj_button_tower_buy_arc
+	
+
+
+# SCRIPTS
+
+GameplayScripts
+	This script file contains a number of scripts used throughout the game
+
+WaveScripts
+	This script file contains several scripts and one constructor used for creating and managing waves
+
+
+# Objects
+
+	# Managers
+		
+		obj_persistent_manager
+			The persistent manager is created in the first room (rm_menu) and is persistent. In initializes
+			all the global variables this game uses and sets up a few other game level variables (such as the cursor).
+			It also controls the music change using the Room Start event. 
+		
+		obj_gameplay_manager
+			This object should be created at the start of the level. You can adjust the starting village health and money
+			in this object.
+	
+		obj_wave_manager
+			The wave manager manages the the waves. You should not use this object in a room. Use a child of it instead like
+			obj_wave_level_1
+		
+		obj_wave_level_1
+			This object is a child of the wave manager. It should be placed in the room level. You should only have one of them.
+			You can create different versions for different levels.
+		
+	# Buttons
+		This folder contains the buttons that are used on the GUI layer.
+		
+	# HUD
+		This folder contains non-interactable HUD elements
+		
+	# Enemies
+		This folder contains the enemies and enemy related objects, such as the defeated enemy animations.
+		You can adjust the enemy speed, health, or what they are worth when destroyed in obj_zombie and obj_frankenstein.
+		
+	# Tower Buttons
+		This folder probably contains the most complex objects in this project. It includes both the popup menus which work a lot like the Buttons do
+		but in the room, not on the GUI layer, and the towers themselves. This would be a good folder to look at if you want a challange. 
+		
+	# Projectiles
+		This folder contains the projectiles and arc bolts along with some animations for them. You can change the damage
+		an arrow does in the collision event with obj_enemy_parent and the damage an arc does in the tower_arc step event for the
+		first arc and obj_arc_new for any chaining arcs (search for the deal_damage function).
+	
+	# Environment
+		This folder contains environment objects that need to be depth sorted and therefore need to be objects.
+		Only the parent has code. All children do is the sprite.
+
+
+# Sequences
+	
+	There are a lot of sequences. Sequences are used for all sorts of things in this project. There are sequences that 
+	control various popup menus or tower menus, and there are sequences which create buttons. There are also sequences
+	that are used to animate objects or as special effects. Be sure to take a look at some of the different sequences
+	and how they are used in code.
+
+
+# Rooms
+
+	There are two rooms. The main menu and rm_level_1. The main menu needs to be the starting room. 
+	Currently, there is only one level, but you can create more (see How to Create New Levels)
+	
+
+# Paths
+
+	Paths are what enemies follow to the village. When they reach the end of a path they will deal damage to the village.
+	There is one path. You can create more and set them to be used in obj_wave_level_1 or any children of obj_wave_manager
+	you create.
+	
+	
+# Shaders
+	
+	There is one shader that is used for the hitflash when you deal damage to an enemy
+
+	
+	
+	
+	
