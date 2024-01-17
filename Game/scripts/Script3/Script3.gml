@@ -7,12 +7,32 @@ function getTechTreeItemSprite(id){
 	switch(id)
 	{
 		case "1":
-			return spr_button_pause;
+			return spr_tower_unlock_aoe;
+		case "11":
+			return spr_tower_unlock_melee;
+		case "12":
+			return spr_tower_unlock_range;
+		case "13":
+			return spr_tower_unlock_range_aoe;
+		case "111":
+			return spr_attack_speed_up;
+		case "112":
+			return spr_damage_up;
+		case "121":
+			return spr_attack_speed_up;
+		case "122":
+			return spr_damage_up;
+		case "131":
+			return spr_attack_speed_up;
+		case "132":
+			return spr_damage_up;
 		case "2":
-			return spr_button_skip;
-		case "3":
-			return spr_button_pause;
-		case "4":
+			return spr_ability_unlock;
+		case "21":
+			return spr_damage_up;
+		case "211":
+			return spr_damage_up;
+		default:
 			return spr_button_pause;
 	}
 }
@@ -55,13 +75,48 @@ function initializeTechTree()
 		prereqs : []	
 	};
 	
+	techTree[$ "11"] ={ 
+		prereqs: ["1"]	
+	};
+	
+	techTree[$ "12"] ={ 
+		prereqs: ["1"]	
+	};
+	
+	techTree[$ "13"] ={ 
+		prereqs: ["1"]	
+	};
+	
+	techTree[$ "111"]= {
+		prereqs: ["11"]	
+	};
+	techTree[$ "112"]= {
+		prereqs: ["11"]	
+	};
+	
+	techTree[$ "121"]= {
+		prereqs: ["12"]	
+	};
+	techTree[$ "122"]= {
+		prereqs: ["12"]	
+	};
+	
+	techTree[$ "131"]= {
+		prereqs: ["13"]	
+	};
+	techTree[$ "132"]= {
+		prereqs: ["13"]	
+	};
+	
 	techTree[$ "2"]= {
-		prereqs: ["1"]	
+		prereqs: []	
 	};
-	techTree[$ "3"]= {
-		prereqs: ["1"]	
+	
+	techTree[$ "21"]= {
+		prereqs: ["2"]	
 	};
-	techTree[$ "4"]= {
-		prereqs: ["2", "3"]	
+	
+	techTree[$ "211"]= {
+		prereqs: ["21"]	
 	};
 }
