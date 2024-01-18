@@ -1,15 +1,15 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "obj_tech_tree_manager",
+  "name": "ability_start",
   "eventList": [
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":4,"eventType":6,"isDnD":false,},
   ],
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Tech Tree",
-    "path": "folders/Testing/Tech Tree.yy",
+    "name": "Ability",
+    "path": "folders/Testing/Ability.yy",
   },
   "parentObjectId": null,
   "persistent": false,
@@ -27,7 +27,10 @@
   "physicsStartAwake": true,
   "properties": [],
   "solid": false,
-  "spriteId": null,
+  "spriteId": {
+    "name": "spr_tower_icon_arc",
+    "path": "sprites/spr_tower_icon_arc/spr_tower_icon_arc.yy",
+  },
   "spriteMaskId": null,
   "visible": true,
 }

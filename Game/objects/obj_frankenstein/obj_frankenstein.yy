@@ -35,5 +35,8 @@
     "path": "sprites/spr_frankenstein_walk_side/spr_frankenstein_walk_side.yy",
   },
   "spriteMaskId": null,
+  "tags": [
+    "enemy",
+  ],
   "visible": true,
 }

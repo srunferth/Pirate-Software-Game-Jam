@@ -26,7 +26,7 @@
   "origin": 0,
   "parent": {
     "name": "Drag And Drop",
-    "path": "folders/Objects/Drag And Drop.yy",
+    "path": "folders/Testing/Drag And Drop.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

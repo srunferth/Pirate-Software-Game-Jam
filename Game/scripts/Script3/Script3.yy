@@ -6,6 +6,6 @@
   "isDnD": false,
   "parent": {
     "name": "Tech Tree",
-    "path": "folders/Objects/Tech Tree.yy",
+    "path": "folders/Testing/Tech Tree.yy",
   },
 }

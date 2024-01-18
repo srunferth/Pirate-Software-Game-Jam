@@ -22,14 +22,14 @@
   "HTile": false,
   "layers": [
     {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"43ceed2a-fdf5-4ffb-a03d-1b5bae446def","blendMode":0,"displayName":"Layer 2","isLocked":false,"opacity":100.0,"visible":true,},
-    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"4a5dd39b-9419-46ef-b1d6-df9c5aa24e86","blendMode":0,"displayName":"Layer 1","isLocked":false,"opacity":100.0,"visible":true,},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"ccddd6a4-75da-4257-ab30-6ca784817cf2","blendMode":0,"displayName":"Layer 1","isLocked":false,"opacity":100.0,"visible":true,},
     {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"eb1f6a48-3935-4182-83e9-b28d412ba6fd","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
   ],
   "nineSlice": null,
   "origin": 4,
   "parent": {
     "name": "Tech Tree",
-    "path": "folders/Objects/Tech Tree.yy",
+    "path": "folders/Testing/Tech Tree.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

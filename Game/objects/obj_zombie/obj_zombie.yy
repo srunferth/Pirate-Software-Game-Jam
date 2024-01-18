@@ -36,5 +36,8 @@
     "path": "sprites/spr_zombie_walk_side/spr_zombie_walk_side.yy",
   },
   "spriteMaskId": null,
+  "tags": [
+    "enemy",
+  ],
   "visible": true,
 }

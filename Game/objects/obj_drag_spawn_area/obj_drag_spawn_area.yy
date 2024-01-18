@@ -12,7 +12,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Drag And Drop",
-    "path": "folders/Objects/Drag And Drop.yy",
+    "path": "folders/Testing/Drag And Drop.yy",
   },
   "parentObjectId": null,
   "persistent": false,
